@@ -1,0 +1,82 @@
+.container {
+  max-width: 1100px;
+}
+
+.weather-app {
+  border: 2.5px solid #72312c;
+  border-radius: 3%;
+  background-color: #fef7cd;
+  padding: 20px 25px 0px 25px;
+}
+
+#search-button {
+  border-radius: 30px;
+  border: 1px solid #f5b212;
+  color: #f5b212;
+  background-color: transparent;
+  padding: 0px 20px;
+  transition: all 200ms ease-in-out;
+}
+
+#search-button:hover {
+  cursor: pointer;
+  background-color: #72312c;
+  color: #fef7cd;
+  border: 1px solid #72312c;
+}
+
+#current-location {
+  color: #f5b212;
+  background-color: transparent;
+  border: none;
+  transition: all 200ms ease-in-out;
+  margin-left: 20px;
+}
+
+#current-location:hover {
+  cursor: pointer;
+  color: #72312c;
+  text-decoration: underline;
+}
+
+#title {
+  font-size: 30px;
+  font-family: "Indie Flower", cursive;
+  color: #72312c;
+  margin-left: 20px;
+}
+
+#location,
+#local-Time,
+.weatherType,
+.extraInfo,
+.units {
+  font-family: "Ranchers", cursive;
+  color: #72312c;
+}
+
+.weatherType {
+  font-size: 34px;
+}
+
+.extraInfo {
+  font-size: 16px;
+  display: center;
+}
+
+#temp {
+  font-family: "Ranchers", cursive;
+  color: #f5b212;
+  font-size: 140px;
+  padding-top: 500px;
+  padding-left: 20px;
+}
+
+.units {
+  position: absolute;
+  top: 92px;
+}
+#fahrenheit,
+#celcius {
+  color: #72312c;
+}
