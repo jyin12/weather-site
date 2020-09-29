@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Bootstrap stuff-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <!--Link to css file-->
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+
+    <!--Font stuff-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Axios API-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>HomeWork Week 5</title>
+  </head>
+
+  <!--Added padding so search bar doesn't touch the top-->
+
+  <body style="padding-top: 20px">
+    <div class="container">
+      <div class="weather-app">
+        <!--The search bar information (fix the search bar size)-->
+        <form action="" id="searchCity">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Search for a city"
+                autocomplete="off"
+                autofocus="on"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <!--end of col-6-->
+
+            <button type="submit" id="search-button" value="Search">
+              Search
+            </button>
+
+            <h1 id="title">The Pompompurin Weather</h1>
+            <img
+              src="Img/logo.png"
+              alt="pompomLogo"
+              width="40px"
+              height="40px"
+            />
+          </div>
+          <!--End of row-->
+        </form>
+        <!--End of searchCity-->
+
+        <!--Location info: leave blank when finished with JS-->
+        <div class="locationInfo">
+          <h1 id="location" style="display: inline">Philadelphia</h1>
+          <button type="submit" id="current-location" value="Current Location">
+            Current Location
+          </button>
+        </div>
+
+        <!--Time info: leave blank when finished with JS-->
+        <h3 id="local-Time"></h3>
+
+        <!--Rows and colums to organize the data set-->
+        <div class="row" id="weatherInfo">
+          <div class="col text-center">
+            <img src="Img/sunIcon.png" alt="weatherIcon" width="110%" />
+
+            <br /><br />
+            <span class="extraInfo">
+              <h5 class="weatherType">SUNNY</h5>
+              Precipitation: 50%
+              <br />
+              Humidity: 60%
+              <br />
+              Wind: 12 mph
+            </span>
+          </div>
+          <!--End of col text-center-->
+
+          <div class="col">
+            <br /><br />
+            <span id="temp">75</span>
+
+            <span class="units">
+              <a href="#" id="fahrenheit">°F</a>
+              |
+              <a href="#" id="celcius">°C</a>
+            </span>
+          </div>
+
+          <!--Big Pompompurin logo-->
+          <div class="col">
+            <img
+              src="Img/pompompurin.png"
+              alt="weatherIcon"
+              style="top: -30px; position: relative"
+            />
+          </div>
+          <!--End of col-->
+        </div>
+        <!--End of weatherInfo-->
+      </div>
+      <!--End of weather-app-->
+    </div>
+    <!--End of container-->
+
+    <!--JavaScript stuff-->
+    <script src="src/index.js"></script>
+  </body>
+</html>
