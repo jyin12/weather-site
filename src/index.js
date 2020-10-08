@@ -1,9 +1,11 @@
 //User enters the city in search bar
-function showTemp(reponse) {
+function showTemp(response) {
   let h3 = document.querySelector("#temp");
-  h3.innerHTML = Math.round(reponse.data.main.temp);
+  h3.innerHTML = Math.round(response.data.main.temp);
   let h5 = document.querySelector(".weatherType");
-  h5.innerHTML = reponse.data.weather[0].description.toUpperCase();
+  h5.innerHTML = response.data.weather[0].description.toUpperCase();
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = response.data.wind.speed;
 }
 
 function displayCity(event) {
@@ -34,20 +36,27 @@ function currentPosition(position) {
   axios.get(url).then(showCurrTemp);
 }
 
+//TESTER
 function showWeatherDetails(response) {
   let precipitation = document.querySelector("#precipitation");
   let wind = document.querySelector("#wind");
   let humidity = document.querySelector("#humidity");
-  //precipitation.innerHTML = response.data
+  //wind.innerHTML = response.data.wind.speed;
+  console.log(response.data);
 }
+let apiKey = "65a6ca53c94284a78ade1834db48e6ab";
+let url = `https://api.openweathermap.org/data/2.5/weather?q=Philadelphia&appid=${apiKey}&units=imperial`;
+axios.get(url).then(showWeatherDetails);
 
-function showCurrTemp(reponse) {
+function showCurrTemp(response) {
   let h3 = document.querySelector("#temp");
-  h3.innerHTML = Math.round(reponse.data.main.temp);
+  h3.innerHTML = Math.round(response.data.main.temp);
   let h1 = document.querySelector("#location");
-  h1.innerHTML = reponse.data.name;
+  h1.innerHTML = response.data.name;
   let h5 = document.querySelector(".weatherType");
-  h5.innerHTML = reponse.data.weather[0].description.toUpperCase();
+  h5.innerHTML = response.data.weather[0].description.toUpperCase();
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = response.data.wind.speed;
 }
 
 function getCurrentPos() {
