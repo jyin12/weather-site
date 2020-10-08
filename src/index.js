@@ -34,6 +34,13 @@ function currentPosition(position) {
   axios.get(url).then(showCurrTemp);
 }
 
+function showWeatherDetails(response) {
+  let precipitation = document.querySelector("#precipitation");
+  let wind = document.querySelector("#wind");
+  let humidity = document.querySelector("#humidity");
+  //precipitation.innerHTML = response.data
+}
+
 function showCurrTemp(reponse) {
   let h3 = document.querySelector("#temp");
   h3.innerHTML = Math.round(reponse.data.main.temp);
